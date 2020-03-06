@@ -52,8 +52,9 @@ def main(path_flieToRead):
     file = open(path_flieToRead, 'r', encoding='utf-8')
     arr_title = file.readline()[:-1].split('\t')
     arr_comment = [Comment(text) for text in file.read().split('\n')[:-1]]
-    print(arr_title)
-    print('\n'.join(str(comment.review_body_pcsed) for comment in arr_comment[:30]))
+    #print(arr_title)
+    #print('\n'.join(str(comment.review_body_pcsed) for comment in arr_comment[:30]))
+    return arr_title, arr_comment
 
 
 if __name__ == '__main__':
